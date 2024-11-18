@@ -476,3 +476,4 @@ darkModeIcons.forEach(icon => {
         });
     });
 });
+

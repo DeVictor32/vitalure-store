@@ -35,7 +35,15 @@
             onload="this.onload=null;this.rel='stylesheet'">
 
         <!-- Scripts principais -->
-        <script defer src="script.min.js"></script>
+        
+        <script>
+            (function () {
+              const analytics = document.createElement("script");
+              analytics.src = "/_vercel/insights/script.js";
+              analytics.defer = true;
+              document.head.appendChild(analytics);
+            })();
+          </script>
     </head>
 </head>
 
