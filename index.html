@@ -2,35 +2,41 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vitalure Store</title>
-    <meta name="description"
-        content="Vitalure: sua jornada para uma vida mais saudável. Suplementos naturais selecionados para promover vitalidade, saúde e bem-estar. Encontre própolis, vitaminas, Whey, Creatinas e minerais de alta qualidade.">
-    <meta name="keywords"
-        content="vitalidade, suplementos naturais, própolis verde, vitamina D3, Whey Protein, Creatina, magnésio, ômega 3, saúde natural, bem-estar">
-    <meta name="author" content="Vitalure">
-    <meta name="robots" content="index, follow">
-    <meta property="og:title" content="Vitalure - Suplementos Naturais">
-    <meta property="og:description"
-        content="Os melhores suplementos naturais para sua saúde e bem-estar. Própolis, Vitaminas, Whey, Creatinas, Ômega 3, Magnésio e muito mais.">
-    <meta property="og:image" content="assets/imgs/Logo.png">
-    <meta property="og:url" content="https://seusite.com">
 
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script defer src="script.js"></script>
-    <script defer src="modal.js"></script>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Vitalure Store</title>
+        <!-- Meta tags essenciais -->
+        <meta name="description"
+            content="Vitalure: sua jornada para uma vida mais saudável. Suplementos naturais selecionados para promover vitalidade, saúde e bem-estar. Encontre própolis, vitaminas, Whey, Creatinas e minerais de alta qualidade.">
+        <meta name="keywords"
+            content="vitalidade, suplementos naturais, própolis verde, vitamina D3, Whey Protein, Creatina, magnésio, ômega 3, saúde natural, bem-estar">
+        <meta name="author" content="Vitalure">
+        <meta name="robots" content="index, follow">
+        <meta property="og:title" content="Vitalure - Suplementos Naturais">
+        <meta property="og:description"
+            content="Os melhores suplementos naturais para sua saúde e bem-estar. Própolis, Vitaminas, Whey, Creatinas, Ômega 3, Magnésio e muito mais.">
+        <meta property="og:image" content="assets/imgs/Logo.png">
+        <meta property="og:url" content="https://seusite.com">
 
-    <link rel="icon" type="image/png" href="assets/Logo.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@400..700&display=swap" rel="stylesheet">
-    
-    
-    <link rel="preload" href="assets/imgs/Logo.png" as="image">
-    <link rel="preload" href="assets/imgs/home-banner-background.png" as="image">
-    <link rel="stylesheet" href="styles.min.css">
-    <script defer src="script.min.js"></script>
+        <!-- CSS e Fonts críticos -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@400..700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+
+        <!-- Preload de imagens críticas -->
+        <link rel="preload" href="assets/imgs/Logo.png" as="image">
+        <link rel="preload" href="assets/imgs/home-banner-background.png" as="image">
+
+        <!-- AOS CSS carregado de forma otimizada -->
+        <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" as="style"
+            onload="this.onload=null;this.rel='stylesheet'">
+
+        <!-- Scripts principais -->
+        <script defer src="script.min.js"></script>
+    </head>
 </head>
 
 <body>
@@ -117,13 +123,9 @@
 
             <div class="home-banner-container">
                 <div class="home-bannerImage-container">
-<img 
-    src="assets/imgs/home-banner-background.png" 
-    alt="banner-background"
-    fetchpriority="high"
-    loading="eager"
-    decoding="async"
->                </div>
+                    <img src="assets/imgs/home-banner-background.png" alt="banner-background" fetchpriority="high"
+                        loading="eager" decoding="async">
+                </div>
 
                 <div class="home-text-section" data-aos="fade-right">
                     <h1 class="primary-heading">
@@ -145,16 +147,16 @@
         </div>
 
         <!-- About Section -->
-        <div id="about" class="about-section-container">
+        <div id="about" class="about-section-container" data-aos="fade-right">
             <div class="about-background-image-container">
                 <img src="assets/imgs/about-background.png" alt="about background">
             </div>
 
             <div class="about-section-image-container">
-                <img src="assets/imgs/about-background-image.png" alt="about background" data-aos="fade-right">
+                <img src="assets/imgs/about-background-image.png" alt="about background">
             </div>
 
-            <div class="about-section-text-container" data-aos="fade-left">
+            <div class="about-section-text-container">
                 <p class="primary-subheading">Sobre Nós</p>
                 <h1 class="primary-heading">
                     Transforme sua vida com escolhas saudáveis.
@@ -189,19 +191,21 @@
 
         <!-- Products Section -->
         <!-- Products Section -->
-        <div id="products" class="products-section-wrapper">
+        <div id="products" class="products-section-wrapper" data-aos="fade-up">
             <div class="products-section-top">
-                <p class="primary-subheading" data-aos="fade-up">Nossos Produtos</p>
-                <h2 class="primary-heading" data-aos="fade-up">Suporte Natural para seu Bem-estar</h2>
-                <p class="primary-text" data-aos="fade-up">
-                    Descubra uma seleção de suplementos de alta qualidade, projetados para promover saúde e bem-estar.
-                </p>
-            </div>
-            <div id="products-section-bottom" class="products-section-bottom" data-aos="fade-up">
-                <!-- Produtos serão inseridos aqui via JavaScript -->
+                <div class="container">
+                    <p class="primary-subheading">Nossos Produtos</p>
+                    <h2 class="primary-heading">Suporte Natural para seu Bem-estar</h2>
+                    <p class="primary-text">
+                        Descubra uma seleção de suplementos de alta qualidade, projetados para promover saúde e
+                        bem-estar.
+                    </p>
+                </div>
+                <div id="products-section-bottom" class="products-section-bottom">
+
+                </div>
             </div>
         </div>
-
         <!-- Modal de Produtos -->
         <div id="product-modal" class="modal-overlay">
             <div class="modal-content">
@@ -232,10 +236,7 @@
             <h2 class="primary-subheading">Entre em contato!</h2>
 
             <div class="contact-form-container">
-                <span>
-                    <a class="whatsapp-button" href="mailto:vitalurestore@gmail.com">vitalurestore@gmail.com</a>
-                </span>
-                </a>
+                <a class="whatsapp-button" href="mailto:vitalurestore@gmail.com">vitalurestore@gmail.com</a>
             </div>
         </div>
 
@@ -287,89 +288,37 @@
         <script src="script.js"></script>
         <script src="modal.js"></script>
         <!-- AOS JS -->
-<script>
-    // Configura prioridade de carregamento
-    const scriptConfig = [
-      {
-        id: 'aos-css',
-        type: 'css',
-        src: 'https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css',
-        priority: 'low'
-      },
-      {
-        id: 'aos-js',
-        type: 'script',
-        src: 'https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js',
-        priority: 'low',
-        onload: () => AOS.init({
-          duration: 1000,
-          once: true,
-          offset: 100
-        })
-      },
-      {
-        id: 'fontawesome',
-        type: 'script',
-        src: 'https://kit.fontawesome.com/9f6b0b9f86.js',
-        priority: 'low'
-      }
-    ];
-    
-    // Carrega recursos de forma assíncrona
-    function loadResource(config) {
-      return new Promise((resolve, reject) => {
-        let element;
-        
-        if (config.type === 'css') {
-          element = document.createElement('link');
-          element.rel = 'stylesheet';
-          element.href = config.src;
-        } else {
-          element = document.createElement('script');
-          element.src = config.src;
-        }
-        
-        element.id = config.id;
-        
-        if (config.priority === 'low') {
-          element.setAttribute('fetchpriority', 'low');
-          element.defer = true;
-        }
-        
-        element.onload = () => {
-          if (config.onload) config.onload();
-          resolve();
-        };
-        element.onerror = reject;
-        
-        document.body.appendChild(element);
-      });
-    }
-    
-    // Carrega recursos após o carregamento inicial da página
-    window.addEventListener('load', () => {
-      Promise.all(scriptConfig.map(loadResource))
-        .catch(error => console.error('Erro ao carregar recursos:', error));
-    });
-    
-    // Observer para carregar recursos quando elementos entrarem na viewport
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const dataScript = entry.target.getAttribute('data-script');
-          if (dataScript) {
-            const config = scriptConfig.find(s => s.id === dataScript);
-            if (config) loadResource(config);
-          }
-        }
-      });
-    });
-    
-    // Observa elementos que precisam de scripts específicos
-    document.querySelectorAll('[data-script]').forEach(element => {
-      observer.observe(element);
-    });
-    </script>
+        <script>
+            // Inicialização do AOS
+            function initAOS() {
+                if (typeof AOS === 'object') {
+                    AOS.init({
+                        duration: 1000,
+                        once: true,
+                        offset: 100
+                    });
+                }
+            }
+
+            // Carregamento de recursos não críticos
+            function loadNonCritical() {
+
+                const aos = document.createElement('script');
+                aos.src = 'https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js';
+                aos.defer = true;
+                aos.onload = initAOS;
+                document.body.appendChild(aos);
+
+
+                const fa = document.createElement('script');
+                fa.src = 'https://kit.fontawesome.com/9f6b0b9f86.js';
+                fa.defer = true;
+                document.body.appendChild(fa);
+            }
+
+
+            window.addEventListener('load', loadNonCritical);
+        </script>
 </body>
 
 </html>

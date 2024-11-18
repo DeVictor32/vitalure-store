@@ -12,8 +12,16 @@
   --primary-color: #edf2fc;
   --secondary-color: #1d1f27;
   --orange-primary: #fe9e0d;
-  --modal-overlay: rgba(0, 0, 0, 0.7);
+  --orange-hover: #e48f0f;
+  --amazon-color: #ff9900;
+  --amazon-hover: #ff8800;
+  --whatsapp-color: #25d366;
+  --whatsapp-hover: #128c7e;
+  --gray-text: #4c4c4c;
   --shadow-color: rgba(0, 0, 0, 0.1);
+  --modal-overlay: rgba(0, 0, 0, 0.7);
+  --stars-color: #ffc107;
+  --testimonial-bg: #dadad996;
 }
 
 .dark-theme{
@@ -62,7 +70,7 @@ nav {
 }
 
 .nav-logo-container {
-  width: 150px;
+  max-width: 150px;
 }
 
 .navbar-menu-container {
@@ -92,6 +100,7 @@ nav {
 /* Menu Mobile */
 /* Correções do Menu Mobile */
 .mobile-menu {
+  display: none;
   position: fixed;
   top: 0;
   right: -100%;
@@ -99,10 +108,10 @@ nav {
   max-width: 300px;
   height: 100vh;
   background-color: var(--primary-color);
-  box-shadow: -2px 0 5px var(--shadow-color);
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
   transition: right 0.3s ease;
   z-index: 1000;
-  padding-top: 80px;
+  padding-top: 80px; /* Espaço para o header */
 }
 
 .mobile-menu.active {
@@ -259,6 +268,7 @@ nav {
   align-items: center;
   justify-content: center;
   text-decoration: none;
+  text-align: center;
 }
 
 .secondary-button i {
@@ -365,7 +375,7 @@ nav {
   align-items: center;
   padding: 10px 20px;
   border: none;
-  border-radius: 5px;
+  border-radius: 20px;
   background-color: var(--orange-primary);
   color: var(--primary-color);
   cursor: pointer;
@@ -447,7 +457,7 @@ nav {
 }
 
 .products-section-bottom {
-  margin-left: 2rem;
+  margin-left: 0;
   margin-top: 5rem;
   display: flex;
   justify-content: center;
@@ -566,7 +576,7 @@ nav {
 }
 
 .whatsapp-button {
-  background-color: var(--whatsapp-color);
+  background-color: var(--amazon-color);
   color: white;
   padding: 0.5rem 1rem;
   border-radius: 5px;
@@ -577,16 +587,16 @@ nav {
   justify-content: center;
   margin: 10px auto;
   width: fit-content;
-  margin-left: 80px;
+  
 
 }
 
 .whatsapp-button:hover {
-  background-color: var(--whatsapp-hover);;
+  background-color: var(--amazon-hover);;
 }
 
 .whatsapp-button i {
-  margin-right: 0.8rem;
+ 
   font-size: 1.2rem;
 }
 
@@ -734,11 +744,13 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  
 }
 
 .modal-product-image img {
-  max-width: 100%;
+  width: 70%;
   height: auto;
+  
 }
 
 .modal-product-info {
@@ -818,6 +830,11 @@ nav {
 }
 
 @media (max-width: 800px) {
+
+  .container {
+    padding: 0 20px;
+  }
+
   .nav-logo-container {
     max-width: 140px;
   }
@@ -896,6 +913,8 @@ nav {
     margin-left: 0rem !important;
     margin-top: 1rem;
     font-size: 1rem !important;
+    border: 50px !important;
+    border-radius: 20px;
   }
 
   .watch-video-button svg {
@@ -906,12 +925,67 @@ nav {
     margin-right: 0rem !important;
   }
 
-  .products-section-wrapper {
-    margin-top: 5rem !important;
+  .App {
+    width: 100%;
+    max-width: 95%;
+    margin: 0 auto;
+    overflow-x: hidden;
   }
-
+  
+  .products-section-wrapper {
+    width: 100%;
+    padding: 0 1rem;
+    margin: 3rem auto;
+  }
+ 
   .products-section-bottom {
-    margin-top: 1rem !important;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+ 
+  .products-section-info {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+   }
+  
+   .info-boxes-img-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+   }
+
+   .button-container {
+    width: 100%;
+    margin-top: auto;
+    text-align: center;
+   }
+   
+   .product-button {
+    margin-bottom: 1rem;
+   }
+
+  
+    .info-boxes-img-container img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .products-section-bottom {
+      grid-template-columns: repeat(2, 1fr);
+      margin-right: 1.5rem;
+    }
+
+    
   }
 
   .contact-form-container {
@@ -958,18 +1032,7 @@ nav {
     transition: color 0.3s;
     cursor: pointer;
   }
-
-  .App {
-    max-width: 95vw;
-  }
-
-  .products-section-bottom {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-    margin-top: 1rem !important;
-  }
-
+  
   .products-section-item {
     width: 100%;
     box-sizing: border-box;
@@ -1116,6 +1179,10 @@ nav {
       left: 0;
       z-index: -1; 
     }
+
+    .watch-video-button {
+      border-radius: 20px;
+    }
   }
   .menu-toggle {
   margin-right: auto;
@@ -1126,7 +1193,7 @@ nav {
   position: relative;
   z-index: 1000;
 }
-}
+
 
 /* Utility Classes */
 .scroll-smooth {
