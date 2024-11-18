@@ -17,14 +17,20 @@
     <meta property="og:image" content="assets/imgs/Logo.png">
     <meta property="og:url" content="https://seusite.com">
 
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script defer src="script.js"></script>
+    <script defer src="modal.js"></script>
+
     <link rel="icon" type="image/png" href="assets/Logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@400..700&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://kit.fontawesome.com/9f6b0b9f86.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    
+    <link rel="preload" href="assets/imgs/Logo.png" as="image">
+    <link rel="preload" href="assets/imgs/home-banner-background.png" as="image">
+    <link rel="stylesheet" href="styles.min.css">
+    <script defer src="script.min.js"></script>
 </head>
 
 <body>
@@ -111,8 +117,13 @@
 
             <div class="home-banner-container">
                 <div class="home-bannerImage-container">
-                    <img src="assets/imgs/home-banner-background.png" alt="banner-background">
-                </div>
+<img 
+    src="assets/imgs/home-banner-background.png" 
+    alt="banner-background"
+    fetchpriority="high"
+    loading="eager"
+    decoding="async"
+>                </div>
 
                 <div class="home-text-section" data-aos="fade-right">
                     <h1 class="primary-heading">
@@ -221,9 +232,8 @@
             <h2 class="primary-subheading">Entre em contato!</h2>
 
             <div class="contact-form-container">
-                <span >
-                    <a 
-                    class="whatsapp-button" href="mailto:vitalurestore@gmail.com">vitalurestore@gmail.com</a>
+                <span>
+                    <a class="whatsapp-button" href="mailto:vitalurestore@gmail.com">vitalurestore@gmail.com</a>
                 </span>
                 </a>
             </div>
@@ -277,8 +287,89 @@
         <script src="script.js"></script>
         <script src="modal.js"></script>
         <!-- AOS JS -->
-        <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-
+<script>
+    // Configura prioridade de carregamento
+    const scriptConfig = [
+      {
+        id: 'aos-css',
+        type: 'css',
+        src: 'https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css',
+        priority: 'low'
+      },
+      {
+        id: 'aos-js',
+        type: 'script',
+        src: 'https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js',
+        priority: 'low',
+        onload: () => AOS.init({
+          duration: 1000,
+          once: true,
+          offset: 100
+        })
+      },
+      {
+        id: 'fontawesome',
+        type: 'script',
+        src: 'https://kit.fontawesome.com/9f6b0b9f86.js',
+        priority: 'low'
+      }
+    ];
+    
+    // Carrega recursos de forma assíncrona
+    function loadResource(config) {
+      return new Promise((resolve, reject) => {
+        let element;
+        
+        if (config.type === 'css') {
+          element = document.createElement('link');
+          element.rel = 'stylesheet';
+          element.href = config.src;
+        } else {
+          element = document.createElement('script');
+          element.src = config.src;
+        }
+        
+        element.id = config.id;
+        
+        if (config.priority === 'low') {
+          element.setAttribute('fetchpriority', 'low');
+          element.defer = true;
+        }
+        
+        element.onload = () => {
+          if (config.onload) config.onload();
+          resolve();
+        };
+        element.onerror = reject;
+        
+        document.body.appendChild(element);
+      });
+    }
+    
+    // Carrega recursos após o carregamento inicial da página
+    window.addEventListener('load', () => {
+      Promise.all(scriptConfig.map(loadResource))
+        .catch(error => console.error('Erro ao carregar recursos:', error));
+    });
+    
+    // Observer para carregar recursos quando elementos entrarem na viewport
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const dataScript = entry.target.getAttribute('data-script');
+          if (dataScript) {
+            const config = scriptConfig.find(s => s.id === dataScript);
+            if (config) loadResource(config);
+          }
+        }
+      });
+    });
+    
+    // Observa elementos que precisam de scripts específicos
+    document.querySelectorAll('[data-script]').forEach(element => {
+      observer.observe(element);
+    });
+    </script>
 </body>
 
 </html>

@@ -358,7 +358,7 @@ function setupMobileMenu() {
     link.addEventListener('click', () => {
       menuToggle.classList.remove('active');
       mobileMenu.classList.remove('active');
-    });
+    }, {passive: true});
   });
 }
 
@@ -369,7 +369,7 @@ function setupSmoothScroll() {
       e.preventDefault();
       const target = $(anchor.getAttribute('href'));
       target?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    });
+    }, {passive: true});
   });
 }
 
@@ -455,7 +455,7 @@ function init() {
 }
 
 // Event Listeners
-document.addEventListener('DOMContentLoaded', init);
+document.addEventListener('DOMContentLoaded', init, {passive: true});
 
 
 

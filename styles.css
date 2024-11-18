@@ -12,16 +12,8 @@
   --primary-color: #edf2fc;
   --secondary-color: #1d1f27;
   --orange-primary: #fe9e0d;
-  --orange-hover: #e48f0f;
-  --amazon-color: #ff9900;
-  --amazon-hover: #ff8800;
-  --whatsapp-color: #25d366;
-  --whatsapp-hover: #128c7e;
-  --gray-text: #4c4c4c;
-  --shadow-color: rgba(0, 0, 0, 0.1);
   --modal-overlay: rgba(0, 0, 0, 0.7);
-  --stars-color: #ffc107;
-  --testimonial-bg: #dadad996;
+  --shadow-color: rgba(0, 0, 0, 0.1);
 }
 
 .dark-theme{
@@ -70,7 +62,7 @@ nav {
 }
 
 .nav-logo-container {
-  max-width: 150px;
+  width: 150px;
 }
 
 .navbar-menu-container {
@@ -100,7 +92,6 @@ nav {
 /* Menu Mobile */
 /* Correções do Menu Mobile */
 .mobile-menu {
-  display: none;
   position: fixed;
   top: 0;
   right: -100%;
@@ -108,10 +99,10 @@ nav {
   max-width: 300px;
   height: 100vh;
   background-color: var(--primary-color);
-  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+  box-shadow: -2px 0 5px var(--shadow-color);
   transition: right 0.3s ease;
   z-index: 1000;
-  padding-top: 80px; /* Espaço para o header */
+  padding-top: 80px;
 }
 
 .mobile-menu.active {
