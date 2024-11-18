@@ -468,7 +468,13 @@ nav {
 
 .product-content {
   flex: 1;
+}
 
+.product-content h2 {
+  margin-bottom: 18px;
+  font-size: 1rem;
+  min-height: 3rem;
+  color: var(--secondary-color);
 }
 
 .button-container {

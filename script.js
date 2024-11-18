@@ -10,7 +10,7 @@ const products = [{
     "Auxilia na proteção das vias respiratórias"
   ],
   amazonLink: "https://amzn.to/4em4PwZ",
-  amazonLinkEU: "https://instagram.com/regina.almeida44"
+  amazonLinkEU: "https://amzn.to/4fO5h8b"
 },
 {
   image: 'assets/products/nac.png',
@@ -23,7 +23,7 @@ const products = [{
     "Contribui para desintoxicação do organismo"
   ],
   amazonLink: "https://amzn.to/3C0hMiv",
-  amazonLinkEU: "https://instagram.com/regina.almeida44"
+  amazonLinkEU: "https://amzn.to/4fCv1Vl"
 },
 {
   image: 'assets/products/omega.png',
@@ -36,7 +36,7 @@ const products = [{
     "Contribui para saúde das articulações"
   ],
   amazonLink: "https://amzn.to/40r0p4n",
-  amazonLinkEU: "https://instagram.com/regina.almeida44"
+  amazonLinkEU: "https://amzn.to/4eza2S2"
 },
 {
   image: 'assets/products/d3.png',
@@ -49,7 +49,7 @@ const products = [{
     "Suporte à saúde cardiovascular"
   ],
   amazonLink: "https://amzn.to/3NL5OvM",
-  amazonLinkEU: "https://instagram.com/regina.almeida44"
+  amazonLinkEU: "https://amzn.to/3YWyKpP"
 },
 {
   image: 'assets/products/magnesio.png',
@@ -62,7 +62,7 @@ const products = [{
     "Importante para saúde muscular"
   ],
   amazonLink: "https://amzn.to/4fpdv6j",
-  amazonLinkEU: "https://instagram.com/regina.almeida44"
+  amazonLinkEU: "https://amzn.to/4fJ2ygs"
 },
 {
   image: 'assets/products/vitac.png',
@@ -75,7 +75,7 @@ const products = [{
     "Melhora a absorção de ferro"
   ],
   amazonLink: "https://amzn.to/3YsyEFY",
-  amazonLinkEU: "https://instagram.com/regina.almeida44"
+  amazonLinkEU: "https://amzn.to/4fv9b5X"
 },
 {
   image: 'assets/products/creatina.png',
@@ -88,7 +88,7 @@ const products = [{
     "Promove maior volume muscular"
   ],
   amazonLink: "https://amzn.to/4e0FgRT",
-  amazonLinkEU: "https://instagram.com/regina.almeida44"
+  amazonLinkEU: "https://amzn.to/4gaKQmf"
 },
 {
   image: 'assets/products/whey.png',
@@ -101,7 +101,7 @@ const products = [{
     "Contém Arginina"
   ],
   amazonLink: "https://amzn.to/4fnAUFn",
-  amazonLinkEU: "https://instagram.com/regina.almeida44"
+  amazonLinkEU: "https://amzn.to/48WCs7t"
 },
 {
   image: 'assets/products/zinco.png',
@@ -115,7 +115,7 @@ const products = [{
     "Auxilio no equilíbrio hormonal"
   ],
   amazonLink: "https://amzn.to/40r2woP",
-  amazonLinkEU: "https://instagram.com/regina.almeida44"
+  amazonLinkEU: "https://amzn.to/3CuYbHt"
 },
 {
   image: 'assets/products/glutamina.png',
@@ -128,7 +128,7 @@ const products = [{
     "Garante a integridade do tecido muscular e intestinal"
   ],
   amazonLink: "https://amzn.to/4fj8VGO",
-  amazonLinkEU: "https://instagram.com/regina.almeida44"
+  amazonLinkEU: "https://amzn.to/4evIEV7"
 },
 {
   image: 'assets/products/taurina.png',
@@ -141,7 +141,7 @@ const products = [{
     "Auxilia no metabolismo de proteínas, carboidratos e gorduras"
   ],
   amazonLink: "https://amzn.to/3BWma1J",
-  amazonLinkEU: "https://instagram.com/regina.almeida44"
+  amazonLinkEU: "https://amzn.to/4hQL1Vf"
 },
 {
   image: 'assets/products/treonato.png',
@@ -153,7 +153,7 @@ const products = [{
     "Foco Aprimorado"
   ],
   amazonLink: "https://amzn.to/4f2zsbB",
-  amazonLinkEU: "https://instagram.com/regina.almeida44"
+  amazonLinkEU: "https://amzn.to/40OOIVh"
 },
 {
   image: 'assets/products/coenzima.png',
@@ -166,7 +166,7 @@ const products = [{
     "Aumenta a energia e a força"
   ],
   amazonLink: "https://amzn.to/3NI8euT",
-  amazonLinkEU: "https://instagram.com/regina.almeida44"
+  amazonLinkEU: "https://amzn.to/4evIEV7"
 },
 {
   image: 'assets/products/selenio.png',
@@ -179,7 +179,7 @@ const products = [{
     "É antioxidante e previne o envelhecimento"
   ],
   amazonLink: "https://amzn.to/4flJqF0",
-  amazonLinkEU: "https://instagram.com/regina.almeida44"
+  amazonLinkEU: "https://amzn.to/40Ob61f"
 },
 {
   image: 'assets/products/metifolato.png',
@@ -192,8 +192,48 @@ const products = [{
     "Apoio à Saúde Mental"
   ],
   amazonLink: "https://amzn.to/3YFP27j",
-  amazonLinkEU: "https://instagram.com/regina.almeida44"
-},];
+  amazonLinkEU: "https://amzn.to/4hUDwwp"
+},
+{
+  image: 'assets/products/melatonina.png',
+  title: "Melatonina + Triptofano",
+  text: "Melatonina 120 Cápsulas + Triptofano, Magnésio, Vitaminas B3 e B9, Fortalvit é um suplemento que combina diversos nutrientes essenciais, projetado para promover a qualidade do sono e o bem-estar geral. Com duração estimada para quatro meses de uso, ele é formulado para atender a várias necessidades do organismo.",
+  benefits: [
+    "Melhora a qualidade do sono",
+    "Redução do estresse e melhora do humor",
+    "Suporte à saúde muscular e nervosa",
+    "Estimula a energia e a função cognitiva"
+  ],
+  amazonLink: "https://amzn.to/40sRNdL",
+  amazonLinkEU: "https://amzn.to/3CK2hLC"
+},
+{
+  image: 'assets/products/pycnogenol.png',
+  title: "Pycnogenol Pinus Pinaster 250mg",
+  text: "Pycnogenol Pinus Pinaster 250mg (60 cápsulas) da Vita Vita é um suplemento feito a partir do extrato da casca do pinheiro marítimo francês (Pinus pinaster). Rico em compostos antioxidantes, como procianidinas, bioflavonoides e ácidos orgânicos, ele oferece uma variedade de benefícios para a saúde.",
+  benefits: [
+    "Ação antioxidante potente",
+    "Melhora a saúde cardiovascular",
+    "Suporte à pele e antienvelhecimento",
+    "Redução de inflamações"
+  ],
+  amazonLink: "https://amzn.to/3Yskpkq",
+  amazonLinkEU: "https://amzn.to/3BWma1J"
+},
+{
+  image: 'assets/products/oculosLuzAzul.png',
+  title: "Óculos Contra Luz Azul de Computador, Tablet ou Celular",
+  text: "Os óculos contra luz azul são acessórios projetados para proteger os olhos da exposição prolongada à luz azul emitida por dispositivos eletrônicos, como computadores, tablets, celulares e televisores. São ideais para pessoas que passam muitas horas em frente a telas digitais, ajudando a prevenir desconfortos visuais e outros problemas associados à luz azul.",
+  benefits: [
+    "Redução da Fadiga Ocular",
+    "Melhora da Qualidade do Sonor",
+    "Proteção contra danos oculares a longo prazo",
+    "Conforto visual"
+  ],
+  amazonLink: "https://amzn.to/3CHrk1U",
+  amazonLinkEU: "https://amzn.to/4fwv4SG"
+}
+];
 
 const testimonialData = [
   {
@@ -276,6 +316,9 @@ function createModalContent(product) {
                 <a href="${product.amazonLinkEU}" target="_blank" rel="noopener noreferrer" class="amazon-button">
                     Compre Agora <img class= "flags" src="assets/icons/euroFlag.webp" alt="Europa">
                 </a>
+                <p class="disclaimer-text" style="font-size: 0.8rem; color: #666; margin-top: 10px; text-align: center;">
+                    * Os produtos, marcas e disponibilidade podem variar entre as regiões do Brasil e Europa.
+                </p>
             </div>
         </div>
     `;
