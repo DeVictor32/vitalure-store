@@ -267,7 +267,7 @@ function displayProducts() {
   if (!container) return console.error("Container de produtos não encontrado");
 
   const productsHTML = products.map((product, index) => `
-        <div class="products-section-info" data-aos="fade-up" data-product-index="${index}">
+        <div class="products-section-info" data-product-index="${index}">
             <div class="info-boxes-img-container">
                 <div class="product-content">
                     <h2>${product.title}</h2>
@@ -349,16 +349,34 @@ function setupMobileMenu() {
 
   if (!menuToggle || !mobileMenu) return;
 
-  menuToggle.addEventListener('click', () => {
+  // Função para fechar o menu
+  function closeMenu() {
+    menuToggle.classList.remove('active');
+    mobileMenu.classList.remove('active');
+  }
+
+  // Toggle do menu quando clica no botão
+  menuToggle.addEventListener('click', (e) => {
+    e.stopPropagation(); // Previne que o clique se propague para o document
     menuToggle.classList.toggle('active');
     mobileMenu.classList.toggle('active');
   });
 
+  // Previne que cliques dentro do menu o fechem
+  mobileMenu.addEventListener('click', (e) => {
+    e.stopPropagation();
+  });
+
+  // Fecha o menu quando clica nos links
   mobileMenu.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      menuToggle.classList.remove('active');
-      mobileMenu.classList.remove('active');
-    }, {passive: true});
+    link.addEventListener('click', closeMenu, {passive: true});
+  });
+
+  // Fecha o menu quando clica fora dele
+  document.addEventListener('click', (e) => {
+    if (mobileMenu.classList.contains('active')) {
+      closeMenu();
+    }
   });
 }
 
