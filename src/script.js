@@ -332,6 +332,13 @@ function openModal(index) {
   modal.querySelector('.modal-content').innerHTML = createModalContent(product);
   modal.style.display = "flex";
   requestAnimationFrame(() => modal.classList.add('modal-active'));
+
+  // Add click event listener to close modal when clicking outside
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      closeModal();
+    }
+  });
 }
 
 function closeModal() {
@@ -339,9 +346,24 @@ function closeModal() {
   if (!modal) return;
 
   modal.classList.remove('modal-active');
-  setTimeout(() => modal.style.display = "none", 300);
+  setTimeout(() => {
+    modal.style.display = "none";
+    // Remove event listener when modal is closed
+    modal.removeEventListener('click', closeModal);
+  }, 300);
 }
 
+// Update init function to include modal setup
+function init() {
+  if (typeof AOS !== 'undefined') {
+    AOS.init({
+      duration: 1000,
+      once: true,
+      offset: 100,
+      easing: 'ease-in-out'
+    });
+  }
+}
 // Menu Mobile
 function setupMobileMenu() {
   const menuToggle = $('.menu-toggle');
@@ -349,30 +371,25 @@ function setupMobileMenu() {
 
   if (!menuToggle || !mobileMenu) return;
 
-  // Função para fechar o menu
   function closeMenu() {
     menuToggle.classList.remove('active');
     mobileMenu.classList.remove('active');
   }
 
-  // Toggle do menu quando clica no botão
   menuToggle.addEventListener('click', (e) => {
-    e.stopPropagation(); // Previne que o clique se propague para o document
+    e.stopPropagation();
     menuToggle.classList.toggle('active');
     mobileMenu.classList.toggle('active');
   });
 
-  // Previne que cliques dentro do menu o fechem
   mobileMenu.addEventListener('click', (e) => {
     e.stopPropagation();
   });
 
-  // Fecha o menu quando clica nos links
   mobileMenu.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', closeMenu, {passive: true});
   });
 
-  // Fecha o menu quando clica fora dele
   document.addEventListener('click', (e) => {
     if (mobileMenu.classList.contains('active')) {
       closeMenu();
@@ -416,43 +433,43 @@ function displayTestimonials() {
 
 // Vídeo Modal
 function setupVideoModal() {
-  const modal = $('#videoModal');
-  const openBtn = $('#openVideoModal');
-  const closeBtn = $('.modal-close');
-  const videoIframe = modal?.querySelector('iframe');
-
-  if (!modal || !openBtn || !closeBtn || !videoIframe) return;
-
-  const videoUrl = videoIframe.src;
-
-  function stopVideo() {
-    videoIframe.src = '';
-    modal.style.display = 'none';
-  }
-
-  openBtn.addEventListener('click', () => {
-    modal.style.display = 'block';
-    videoIframe.src = videoUrl;
-  });
-
-  closeBtn.addEventListener('click', stopVideo);
-
-  window.addEventListener('click', (event) => {
-    if (event.target === modal) stopVideo();
-  });
-}
-
-function setupModalListeners() {
-  const modal = $('#product-modal');
-  if (!modal) return;
+  const modal = document.getElementById('videoModal');
+  const openBtn = document.getElementById('openVideoModal');
+  const closeBtn = document.querySelector('.modal-close');
+  const videoContainer = document.querySelector('.video-container');
   
-  modal.addEventListener('click', (e) => {
-      if (e.target === modal) {
-          closeModal();
-      }
+  if (!modal || !openBtn || !closeBtn) return;
+  
+  openBtn.addEventListener('click', () => {
+    modal.style.display = 'flex';
+    if (videoContainer) {
+      videoContainer.innerHTML = `
+        <iframe 
+          width="100%" 
+          height="315" 
+          src="https://www.youtube.com/embed/PaVGOno8z6o"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>`;
+    }
   });
-}
-
+ 
+  function closeVideoModal() {
+    modal.style.display = 'none';
+    if (videoContainer) {
+      videoContainer.innerHTML = '';
+    }
+  }
+ 
+  closeBtn.addEventListener('click', closeVideoModal);
+ 
+  window.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      closeVideoModal();
+    }
+  });
+ }
 // Inicialização
 function init() {
   if (typeof AOS !== 'undefined') {
@@ -469,22 +486,18 @@ function init() {
   displayTestimonials();
   setupVideoModal();
   setupSmoothScroll();
-  setupModalListeners();
+  
 }
 
 // Event Listeners
 document.addEventListener('DOMContentLoaded', init, {passive: true});
 
-
-
 let darkModeIcons = document.querySelectorAll("#dark-mode-icon");
 
-// Adiciona o evento de click para cada ícone
 darkModeIcons.forEach(icon => {
     icon.addEventListener("click", function() {
         document.body.classList.toggle("dark-theme");
         
-        // Atualiza todos os ícones ao mesmo tempo
         darkModeIcons.forEach(icon => {
             if (document.body.classList.contains("dark-theme")) {
                 icon.src = "assets/icons/sun.png";
@@ -494,4 +507,3 @@ darkModeIcons.forEach(icon => {
         });
     });
 });
-

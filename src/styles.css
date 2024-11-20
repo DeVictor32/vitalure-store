@@ -846,6 +846,28 @@ nav {
     max-width: 140px;
   }
 
+  .modal-overlay {
+    display: none; /* Ainda mais baixo em mobile */
+  }
+ 
+ .modal-content {
+    position: relative;
+    width: 90%;
+    max-width: 800px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+ }
+ 
+ @media (max-width: 800px) {
+    .modal-overlay {
+        padding-top: 100vh; /* Ainda mais baixo em mobile */
+    }
+ }
+.modal-overlay.active {
+    display: flex;
+}
+
   .navbar-links-container {
     display: none;
   }
