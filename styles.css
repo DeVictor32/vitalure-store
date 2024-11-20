@@ -264,13 +264,16 @@ nav {
   font-size: 1.1rem;
   cursor: pointer;
   font-weight: 600;
-  color:var(--primary-color);
+  color: #F5F5F5;
   transition: background-color 0.3s;
   display: flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
+  margin: 0 auto;
+  text-align: center;
 }
+
 
 .secondary-button i {
   margin-left: 0.75rem;
@@ -310,10 +313,10 @@ nav {
 }
 
 .primary-heading {
-  font-size: 4rem;
+  font-size: 3rem;
   color: var(--secondary-color);
   max-width: 600px;
-  text-align: left;
+  text-align: center;
   line-height: 1.2;
 }
 
@@ -321,8 +324,9 @@ nav {
   font-size: clamp(1rem, 3vw, 1.5rem);
   max-width: 500px;
   color: var(--secondary-color);
-  margin: 1.5rem 0;
-  text-align: left;
+  
+  margin: 1rem auto;
+  text-align: center;
 }
 
 /* About Section */
@@ -363,8 +367,13 @@ nav {
 .primary-subheading {
   font-weight: 700;
   color: var(--orange-primary);
-  font-size: 1.15rem;
+  font-size: 1.75rem;
+  text-align: center;
+  margin-bottom: 1rem;
+
 }
+
+
 
 .about-buttons-container {
   margin-top: 2rem;
@@ -375,6 +384,7 @@ nav {
   display: flex;
   align-items: center;
   padding: 10px 20px;
+  margin: 0 auto;
   border: none;
   border-radius: 24px;
   background-color: var(--orange-primary);
@@ -568,7 +578,7 @@ nav {
   background-color:var(--primary-color);
   max-width: 400px;
   width: 100%;
-  margin-top: 3rem;
+  margin: auto;
   display: flex;
   align-items: center;
   padding: 0.5rem;
@@ -693,16 +703,16 @@ nav {
 
 /* Estilos do modal produtos*/
 .modal-overlay {
-  display: none;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: var(--modal-overlay);
-  z-index: 1000;
+  background: rgba(0, 0, 0, 0.7); /* fundo escuro semi-transparente */
+  display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 1000;
 }
 
 .modal-content {
@@ -713,8 +723,11 @@ nav {
   width: 90%;
   max-height: 90vh;
   overflow-y: auto;
-  position: relative;
+  position: center;
+  margin-top: 350px;
 }
+
+
 
 .modal-close {
   position: absolute;
@@ -869,7 +882,7 @@ nav {
   .primary-heading {
     text-align: center;
     max-width: 100%;
-    font-size: 3.3rem;
+    font-size: 2.5rem;
     
   }
 
@@ -1022,6 +1035,18 @@ nav {
     background-color: var(--amazon-hover);
   }
   
+  .modal-overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
   
   @media screen and (max-width: 480px) {
     .products-section-bottom {
@@ -1046,7 +1071,7 @@ nav {
 
   .testimonial-cards-container {
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    margin-left: 1.5rem;
+    margin: 0 auto;
     gap: 1.5rem;
     padding: 0.75rem;
   }
@@ -1221,3 +1246,4 @@ nav {
   cursor: pointer;
   margin-left: 10px;
 }
+
