@@ -46,12 +46,12 @@
         
             
             <script>
-                (function () {
+                if (window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1') {
                     const analytics = document.createElement("script");
                     analytics.src = "/_vercel/insights/script.js";
                     analytics.defer = true;
                     document.head.appendChild(analytics);
-                })();
+                }
             </script>
     
     </head>
@@ -210,9 +210,9 @@
 
 
         <!-- Products Section -->
-        <div id="products" class="products-section-wrapper" data-aos="fade-up">
+        <div  class="products-section-wrapper" data-aos="fade-up">
             <div class="products-section-top">
-                <div class="container">
+                <div class="container"id="products">
                     <p class="primary-subheading">Nossos Produtos</p>
                     <h2 class="primary-heading">Suporte natural para seu bem-estar</h2>
                     <p class="primary-text">
@@ -305,7 +305,7 @@
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
         <script src="script.js"></script>
-        <script src="modal.js"></script>
+        
         <!-- AOS JS -->
         <script>
             // Inicialização do AOS

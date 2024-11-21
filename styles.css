@@ -40,7 +40,7 @@ body {
   max-width: 100%;
   overflow-x: hidden;
   background-color: var(--primary-color);
-  padding: 0 3rem;
+  padding: 0 ;
 }
 
 h2 {
@@ -61,7 +61,7 @@ img {
 .container {
   max-width: 1290px;
   margin: 0 auto;
-  padding: 0 2rem;
+  
 }
 /* Navigation */
 nav {
@@ -98,7 +98,6 @@ nav {
 }
 
 /* Menu Mobile */
-/* Correções do Menu Mobile */
 .mobile-menu {
   position: fixed;
   top: 0;
@@ -155,7 +154,6 @@ nav {
   margin-right: 12px;
 }
 
-/* Estilo do botão hamburguer */
 /* Estilos do botão hamburger */
 .menu-toggle {
   display: none;
@@ -191,11 +189,11 @@ nav {
   }
 
   .hamburger-icon::before {
-    top: -4px; /* Reduzido para 4px */
+    top: -4px; 
   }
 
   .hamburger-icon::after {
-    bottom: -4px; /* Reduzido para 4px */
+    bottom: -4px; 
   }
 
   /* Animação quando o menu está ativo */
@@ -290,9 +288,9 @@ nav {
 .home-bannerImage-container {
   position: absolute;
   top: -100px;
-  right: -170px;
+  right: -200px;
   z-index: -2;
-  max-width: 700px;
+  max-width: 900px;
 }
 
 .home-image-container {
@@ -628,7 +626,7 @@ nav {
 }
 
 .footer-icons .social-icon img {
-  width: 1.5rem; /* Tamanho do ícone */
+  width: 1.5rem;
   height: 1.5rem;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -831,8 +829,12 @@ nav {
 }
 
 @media (max-width: 800px) {
-  .nav-logo-container {
-    max-width: 140px;
+  .home-bannerImage-container {
+    max-width: 800px;
+  }
+
+  .nav-logo-container  {
+    margin-left: 10px;
   }
 
   .modal-content {
@@ -842,7 +844,7 @@ nav {
   }
 
   .modal-content iframe {
-    height: 250px; /* Altura ajustada para telas menores */
+    height: 250px; 
   }
 
   .modal-close {
@@ -1062,7 +1064,19 @@ nav {
     }
 
     .modal-content iframe {
-      height: 200px; /* Altura ainda menor para smartphones */
+      height: 200px; 
+    }
+
+    .home-banner-container {
+      padding: 15px !important;
+    }
+
+    .home-bannerImage-container {
+      max-width: 800px;
+    }
+
+    .nav-logo-container  {
+      margin-left: 10px;
     }
   }
 
@@ -1147,7 +1161,7 @@ nav {
       255,
       255,
       0.6
-    ); /* Fundo branco com 90% de opacidade */
+    ); 
     backdrop-filter: blur(10px);
   }
 
