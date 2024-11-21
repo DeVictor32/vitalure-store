@@ -435,43 +435,42 @@ function displayTestimonials() {
 
 // Vídeo Modal
 function setupVideoModal() {
-  const modal = document.getElementById('videoModal');
-  const openBtn = document.getElementById('openVideoModal');
-  const closeBtn = document.querySelector('.modal-close');
-  const videoContainer = document.querySelector('.video-container');
-  
-  if (!modal || !openBtn || !closeBtn) return;
-  
-  openBtn.addEventListener('click', () => {
-    modal.style.display = 'flex';
-    if (videoContainer) {
-      videoContainer.innerHTML = `
-        <iframe 
-          width="100%" 
-          height="315" 
-          src="https://www.youtube.com/embed/PaVGOno8z6o"
-          title="YouTube video player"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen>
-        </iframe>`;
-    }
-  });
- 
-  function closeVideoModal() {
+  const modal = $('#videoModal');
+  const openBtn = $('#openVideoModal');
+  const closeBtn = $('.modal-close');
+  const videoIframe = modal?.querySelector('iframe');
+
+  if (!modal || !openBtn || !closeBtn || !videoIframe) return;
+
+  const videoUrl = videoIframe.src;
+
+  function stopVideo() {
+    videoIframe.src = '';
     modal.style.display = 'none';
-    if (videoContainer) {
-      videoContainer.innerHTML = '';
-    }
   }
- 
-  closeBtn.addEventListener('click', closeVideoModal);
- 
-  window.addEventListener('click', (e) => {
-    if (e.target === modal) {
-      closeVideoModal();
-    }
+
+  openBtn.addEventListener('click', () => {
+    modal.style.display = 'block';
+    videoIframe.src = videoUrl;
   });
- }
+
+  closeBtn.addEventListener('click', stopVideo);
+
+  window.addEventListener('click', (event) => {
+    if (event.target === modal) stopVideo();
+  });
+}
+
+function setupModalListeners() {
+  const modal = $('#product-modal');
+  if (!modal) return;
+
+  modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+          closeModal();
+      }
+  });
+}
 // Inicialização
 function init() {
   if (typeof AOS !== 'undefined') {

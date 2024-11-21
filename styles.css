@@ -24,15 +24,16 @@
   --testimonial-bg: #dadad996;
 }
 
-.dark-theme{
+.dark-theme {
   --primary-color: #343434;
   --secondary-color: #fff;
 }
 
-
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
+  overflow-y: scroll;
+  
 }
 
 body {
@@ -44,7 +45,6 @@ body {
 
 h2 {
   color: var(--orange-primary);
-
 }
 img {
   max-width: 100%;
@@ -59,9 +59,9 @@ img {
 }
 
 .container {
-  max-width: 1290px; 
+  max-width: 1290px;
   margin: 0 auto;
-  padding: 0 2rem; 
+  padding: 0 2rem;
 }
 /* Navigation */
 nav {
@@ -70,7 +70,6 @@ nav {
   justify-content: space-between;
   min-height: 90px;
   padding: 0 1rem;
-  
 }
 
 .nav-logo-container {
@@ -93,8 +92,6 @@ nav {
   font-weight: 600;
   transition: color 0.3s;
 }
-
-
 
 .navbar-links-container a:last-child {
   margin-right: 0;
@@ -189,7 +186,7 @@ nav {
 
   .hamburger-icon::before,
   .hamburger-icon::after {
-    content: '';
+    content: "";
     position: absolute;
   }
 
@@ -220,7 +217,7 @@ nav {
 /* Media query para controlar a visibilidade */
 @media (min-width: 801px) {
   .mobile-menu {
-    display: none !important; 
+    display: none !important;
   }
 
   .navbar-menu-container {
@@ -230,11 +227,11 @@ nav {
 
 @media (max-width: 800px) {
   .mobile-menu {
-    display: block; 
+    display: block;
   }
 
   .navbar-menu-container {
-    display: block; 
+    display: block;
   }
 }
 
@@ -264,16 +261,15 @@ nav {
   font-size: 1.1rem;
   cursor: pointer;
   font-weight: 600;
-  color: #F5F5F5;
-  transition: background-color 0.3s;
+  color: #f5f5f5;
+  transition: var(--orange-hover) 0.3s;
   display: flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  margin: 0 auto;
+  margin: 1rem auto;
   text-align: center;
 }
-
 
 .secondary-button i {
   margin-left: 0.75rem;
@@ -300,7 +296,7 @@ nav {
 }
 
 .home-image-container {
-  max-width: 600px;
+  max-width: 500px;
   flex: 1;
 }
 
@@ -310,6 +306,7 @@ nav {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  margin: 0 auto;
 }
 
 .primary-heading {
@@ -318,14 +315,15 @@ nav {
   max-width: 600px;
   text-align: center;
   line-height: 1.2;
+  margin: 1rem auto;
 }
 
 .primary-text {
   font-size: clamp(1rem, 3vw, 1.5rem);
   max-width: 500px;
   color: var(--secondary-color);
-  
-  margin: 1rem auto;
+
+  margin: 0 auto;
   text-align: center;
 }
 
@@ -347,7 +345,6 @@ nav {
 .about-section-image-container {
   flex: 0.9;
   margin-right: 1rem;
-  
 }
 
 .about-section-image-container img {
@@ -370,10 +367,7 @@ nav {
   font-size: 1.75rem;
   text-align: center;
   margin-bottom: 1rem;
-
 }
-
-
 
 .about-buttons-container {
   margin-top: 2rem;
@@ -414,7 +408,7 @@ nav {
 
 .products-section-top p {
   text-align: center;
-  max-width: 600px 
+  max-width: 600px;
 }
 
 .products-section-top h1 {
@@ -575,7 +569,7 @@ nav {
 }
 
 .contact-form-container {
-  background-color:var(--primary-color);
+  background-color: var(--primary-color);
   max-width: 400px;
   width: 100%;
   margin: auto;
@@ -598,12 +592,10 @@ nav {
   justify-content: center;
   margin: 10px auto;
   width: fit-content;
-  
-
 }
 
 .whatsapp-button:hover {
-  background-color: var(--orange-hover);;
+  background-color: var(--orange-hover);
 }
 
 .whatsapp-button i {
@@ -630,8 +622,8 @@ nav {
 
 .footer-icons {
   margin-top: 2.5rem;
-  display: flex; 
-  gap: 1.25rem; 
+  display: flex;
+  gap: 1.25rem;
   color: var(--gray-text);
 }
 
@@ -703,32 +695,29 @@ nav {
 
 /* Estilos do modal produtos*/
 .modal-overlay {
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.7); /* fundo escuro semi-transparente */
-  display: flex;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
   justify-content: center;
   align-items: center;
-  z-index: 1000;
-  display: none;
+  overflow: hidden;
 }
 
 .modal-content {
-  background: var(--primary-color);
+  background-color: #fff;
   padding: 20px;
   border-radius: 8px;
-  max-width: 800px;
+  position: relative;
   width: 90%;
-  max-height: 90vh;
-  overflow-y: auto;
-  position: center;
-  margin-top: 350px;
+  max-width: 800px;
+  pointer-events: auto;
+  margin: 150px auto;
 }
-
-
 
 .modal-close {
   position: absolute;
@@ -768,7 +757,6 @@ nav {
 
 .modal-product-info {
   flex: 1;
-  
 }
 
 .modal-product-info h2 {
@@ -817,9 +805,9 @@ nav {
 }
 
 .flags {
-  width: 20px; 
+  width: 20px;
   height: auto;
-  margin-left: 4px; 
+  margin-left: 4px;
 }
 
 .amazon-button:hover {
@@ -847,27 +835,20 @@ nav {
     max-width: 140px;
   }
 
-  .modal-overlay {
-    display: none; /* Ainda mais baixo em mobile */
+  .modal-content {
+    width: 95%;
+    padding: 15px;
+    margin: 100px auto;
   }
- 
- .modal-content {
-    position: relative;
-    width: 90%;
-    max-width: 800px;
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
- }
- 
- @media (max-width: 800px) {
-    .modal-overlay {
-        padding-top: 100vh; /* Ainda mais baixo em mobile */
-    }
- }
-.modal-overlay.active {
-    display: flex;
-}
+
+  .modal-content iframe {
+    height: 250px; /* Altura ajustada para telas menores */
+  }
+
+  .modal-close {
+    top: 10px;
+    right: 10px;
+  }
 
   .navbar-links-container {
     display: none;
@@ -876,8 +857,8 @@ nav {
   .navbar-menu-container {
     display: block;
     position: fixed;
-    top: 20px; 
-    right: 20px; 
+    top: 20px;
+    right: 20px;
     z-index: 1000;
   }
 
@@ -906,7 +887,6 @@ nav {
     text-align: center;
     max-width: 100%;
     font-size: 2.5rem;
-    
   }
 
   .primary-text {
@@ -958,8 +938,6 @@ nav {
   .products-section-wrapper {
     margin-top: 5rem !important;
   }
-
-  
 
   .contact-form-container {
     padding: 0.5rem !important;
@@ -1019,7 +997,7 @@ nav {
     box-sizing: border-box;
     margin: 0 auto !important;
   }
-  
+
   .products-section-info {
     margin: 0 !important;
     width: 100%;
@@ -1030,7 +1008,7 @@ nav {
     align-items: center;
     border-radius: 8px;
   }
-  
+
   .products-section-item {
     width: 100%;
     display: flex;
@@ -1038,7 +1016,7 @@ nav {
     align-items: center;
     gap: 0.5rem;
   }
-  
+
   .product-button {
     background-color: var(--orange-primary);
     color: white;
@@ -1057,30 +1035,17 @@ nav {
   .product-button:hover {
     background-color: var(--amazon-hover);
   }
-  
-  .modal-overlay {
-    background-color: rgba(0, 0, 0, 0.5);
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-  }
-  
+
   @media screen and (max-width: 480px) {
     .products-section-bottom {
       gap: 2rem;
       padding: 0.25rem;
     }
-  
+
     .products-section-info {
       padding: 0.5rem;
     }
-  
+
     .product-button {
       padding: 0.5rem 1rem !important;
       font-size: 0.8rem !important;
@@ -1090,6 +1055,15 @@ nav {
       padding: 0rem !important;
     }
 
+    .modal-content {
+      width: 100%;
+      padding: 10px;
+      margin: 0 auto;
+    }
+
+    .modal-content iframe {
+      height: 200px; /* Altura ainda menor para smartphones */
+    }
   }
 
   .testimonial-cards-container {
@@ -1159,17 +1133,22 @@ nav {
     width: 24px;
     height: 24px;
     margin-right: 10px;
-}
+  }
 
-.menu-list a {
+  .menu-list a {
     display: flex;
     align-items: center;
-}
+  }
 
   .mobile-menu.active {
     right: 0;
-    background-color: rgba(255, 255, 255, 0.6); /* Fundo branco com 90% de opacidade */
-   backdrop-filter: blur(10px);
+    background-color: rgba(
+      255,
+      255,
+      255,
+      0.6
+    ); /* Fundo branco com 90% de opacidade */
+    backdrop-filter: blur(10px);
   }
 
   /* Conteúdo do menu mobile */
@@ -1207,7 +1186,7 @@ nav {
   }
 
   .modal-product-image {
-    flex: 0 0 100%; 
+    flex: 0 0 100%;
   }
 
   .modal-product-image img {
@@ -1220,18 +1199,16 @@ nav {
     align-items: center;
   }
 
-  
-
   @media (max-width: 600px) {
     .home-bannerImage-container img,
     .about-background-image-container img {
-      width: 100%; 
+      width: 100%;
       height: auto;
-      opacity: 0.3; 
+      opacity: 0.3;
       position: relative;
       top: 0;
       left: 0;
-      z-index: -1; 
+      z-index: -1;
     }
   }
   .menu-toggle {
@@ -1244,17 +1221,10 @@ nav {
     padding: 10px;
     z-index: 1000;
     margin: 0;
-}
+  }
 }
 
 /* Utility Classes */
-.scroll-smooth {
-  scroll-behavior: smooth;
-}
-
-.hidden {
-  display: none !important;
-}
 
 .play-icon {
   display: inline-block;
@@ -1269,4 +1239,3 @@ nav {
   cursor: pointer;
   margin-left: 10px;
 }
-
