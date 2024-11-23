@@ -114,7 +114,6 @@ Principais breakpoints:
 
 - Email: vitalurestore@gmail.com
 - Instagram: [@regina.almeida44](https://www.instagram.com/regina.almeida44)
-- WhatsApp: [Enviar mensagem](https://wa.me/351966019690)
 
 ## 📄 Licença
 
