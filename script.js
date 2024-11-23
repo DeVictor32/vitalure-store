@@ -223,18 +223,31 @@ const products = [{
   amazonLinkEU: "https://amzn.to/3BWma1J"
 },
 {
-  image: 'assets/products/oculosLuzAzul.png',
-  title: "Óculos Contra Luz Azul de Computador, Tablet ou Celular",
-  text: "Os óculos contra luz azul são acessórios projetados para proteger os olhos da exposição prolongada à luz azul emitida por dispositivos eletrônicos, como computadores, tablets, celulares e televisores. São ideais para pessoas que passam muitas horas em frente a telas digitais, ajudando a prevenir desconfortos visuais e outros problemas associados à luz azul.",
+  image:"assets/products/creatina-mono.jpg",
+  title: "Black Skull Creatine Pure Monohydrate",
+  text: "Black Skull Creatine Pure Monohydrate é um suplemento alimentar que tem como principal objetivo melhorar o desempenho físico, aumentar a força e auxiliar na recuperação muscular. A creatina monohidratada é uma das substâncias mais estudadas e utilizadas no mundo da nutrição esportiva, reconhecida pela sua eficácia.",
   benefits: [
-    "Redução da Fadiga Ocular",
-    "Melhora da Qualidade do Sonor",
-    "Proteção contra danos oculares a longo prazo",
-    "Conforto visual"
+    "Aumento de força e potência muscular",
+    "Hidratação celular",
+    "Auxílio no ganho de massa magra",
+    "Melhoria na recuperação muscular"
   ],
-  amazonLink: "https://amzn.to/3CHrk1U",
-  amazonLinkEU: "https://amzn.to/4fwv4SG"
+  amazonLink: "https://amzn.to/3ZfSdTq",
+  amazonLinkEU: "https://amzn.to/40Upp4p"
 }
+/*{
+  image: 'assets/products/',
+  title: "",
+  text: "",
+  benefits: [
+    "",
+    "",
+    "",
+    ""
+  ],
+  amazonLink: "",
+  amazonLinkEU: ""
+},*/
 ];
 
 const testimonialData = [

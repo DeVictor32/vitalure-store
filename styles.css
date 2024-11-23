@@ -433,7 +433,7 @@ nav {
   margin: 0rem 0rem;
   font-size: 1rem;
   min-height: 3rem;
-  color: var(--secondary-color);
+  color: var(--orange-primary);
 }
 
 .products-section-info p {
@@ -749,7 +749,7 @@ nav {
 }
 
 .modal-product-image img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
 }
 
@@ -758,8 +758,9 @@ nav {
 }
 
 .modal-product-info h2 {
-  margin-top: 0;
+  text-align: center;
   color: var(--orange-primary);
+  color: #fe9e0d;
   font-size: 24px;
 }
 
@@ -1036,6 +1037,13 @@ nav {
 
   .product-button:hover {
     background-color: var(--amazon-hover);
+  }
+
+  .modal-product-info h2 {
+    margin-top: 0;
+    color: var(--orange-primary);
+    color: #fe9e0d;
+    font-size: 20px;
   }
 
   @media screen and (max-width: 480px) {
