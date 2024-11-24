@@ -521,7 +521,8 @@ darkModeIcons.forEach(icon => {
         });
     });
 });
-// Primeiro, vamos criar a estrutura HTML dos modais
+
+
 document.addEventListener('DOMContentLoaded', function() {
     // Modal de Política de Privacidade
     const privacyModalHTML = `
