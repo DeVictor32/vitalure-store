@@ -234,7 +234,21 @@ const products = [{
   ],
   amazonLink: "https://amzn.to/3ZfSdTq",
   amazonLinkEU: "https://amzn.to/40Upp4p"
+},
+{
+  image: 'assets/products/colageno.png',
+  title: "Colágeno tipo 2 40mg, ácido hialurônico, M.S.M., Cálcio, Biogens",
+  text: "Suplemento especialmente desenvolvido para promover a saúde das articulações, ossos e tecidos conectivos, auxiliando na manutenção da mobilidade e no alívio de desconfortos articulares. Sua fórmula avançada combina nutrientes essenciais para regeneração e proteção das articulações, além de favorecer a hidratação dos tecidos e a preservação da saúde óssea. Ideal para quem busca maior qualidade de vida e suporte ao bem-estar físico.",
+  benefits: [
+    "Melhora da saúde articular",
+    "Hidratação dos tecidos",
+    "Fortalecimento dos ossos",
+    "Redução de inflamações"
+  ],
+  amazonLink: "https://amzn.to/3ZnbwKM",
+  amazonLinkEU: "https://amzn.to/3B9BdVL"
 }
+];
 /*{
   image: 'assets/products/',
   title: "",
@@ -248,7 +262,6 @@ const products = [{
   amazonLink: "",
   amazonLinkEU: ""
 },*/
-];
 
 const testimonialData = [
   {

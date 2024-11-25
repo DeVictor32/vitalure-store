@@ -758,8 +758,8 @@ nav {
 }
 
 .modal-product-info h2 {
-  text-align: center;
-  color: #fe9e0d;
+  text-align: left;
+  color: var(--orange-primary);
   font-size: 24px;
 }
 
