@@ -759,7 +759,7 @@ nav {
 
 .modal-product-info h2 {
   text-align: left;
-  color: var(--orange-primary);
+  color: var(--orange-primary)!important;
   font-size: 24px;
 }
 
@@ -1040,8 +1040,7 @@ nav {
 
   .modal-product-info h2 {
     margin-top: 0;
-    color: var(--orange-primary);
-    color: #fe9e0d;
+    color: var(--orange-primary)!important;
     font-size: 20px;
   }
 
