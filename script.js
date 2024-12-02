@@ -223,7 +223,7 @@ const products = [{
   amazonLinkEU: "https://amzn.to/3BWma1J"
 },
 {
-  image:"assets/products/creatina-mono.jpg",
+  image: "assets/products/creatina-mono.jpg",
   title: "Black Skull Creatine Pure Monohydrate",
   text: "Black Skull Creatine Pure Monohydrate é um suplemento alimentar que tem como principal objetivo melhorar o desempenho físico, aumentar a força e auxiliar na recuperação muscular. A creatina monohidratada é uma das substâncias mais estudadas e utilizadas no mundo da nutrição esportiva, reconhecida pela sua eficácia.",
   benefits: [
@@ -247,8 +247,22 @@ const products = [{
   ],
   amazonLink: "https://amzn.to/3ZnbwKM",
   amazonLinkEU: "https://amzn.to/3B9BdVL"
+},
+{
+  image: 'assets/products/b-12.png',
+  title: "Vitamina B-12 1mg com Metilcobalamina",
+  text: "A Vitamina B12 (Metilcobalamina) é uma forma ativa e natural da vitamina B12, essencial para diversas funções do organismo. É uma vitamina hidrossolúvel que desempenha um papel vital no funcionamento do sistema nervoso, na formação de células vermelhas do sangue e na síntese de DNA.",
+  benefits: [
+    "Apoio ao Sistema Nervoso",
+    "Produção de Energia",
+    "Formação de Glóbulos Vermelhos",
+    "Melhora da Memória e Concentração"
+  ],
+  amazonLink: "",
+  amazonLinkEU: ""
 }
 ];
+/*
 /*{
   image: 'assets/products/',
   title: "",
@@ -265,25 +279,25 @@ const products = [{
 
 const testimonialData = [
   {
-  image: 'assets/users/erika.png',
-  text: "Comecei a me alimentar de forma mais saudável e a usar suplementos e já percebo uma diferença enorme! Tenho muito mais energia para o trabalho e para os exercícios, além de sentir minha pele e cabelo mais saudáveis. Foi uma mudança que impactou minha vida de forma positiva!",
-  nome: "Erika Cristina"
-},
-{
-  image: 'assets/users/carmen.png',
-  text: "Desde que comecei com a suplementação e uma alimentação balanceada, percebo uma grande melhora nas articulações e na minha disposição. Sinto meu corpo mais forte e tenho mais ânimo para fazer coisas que antes evitava. Realmente, fez toda a diferença!",
-  nome: "Carmen Lúcia"
-},
-{
-  image: 'assets/users/lucia.png',
-  text: "Com a nova alimentação e suplementação, consegui controlar melhor meu diabetes e reduzir o colesterol. Hoje, me sinto mais leve, com mais energia e menos preocupada com a saúde, o que me permite aproveitar mais os momentos com a família.",
-  nome: "Lucia Helena"
-},
-{
-  image: 'assets/users/lucas.png',
-  text: "A mudança para uma rotina de alimentação saudável e suplementação me trouxe mais foco e disposição, tanto no trabalho quanto na vida pessoal. Estou com muito mais energia e consigo lidar com o dia a dia de forma leve. Me sinto muito mais disposto!",
-  nome: "Lucas D'Aloia"
-}];
+    image: 'assets/users/erika.png',
+    text: "Comecei a me alimentar de forma mais saudável e a usar suplementos e já percebo uma diferença enorme! Tenho muito mais energia para o trabalho e para os exercícios, além de sentir minha pele e cabelo mais saudáveis. Foi uma mudança que impactou minha vida de forma positiva!",
+    nome: "Erika Cristina"
+  },
+  {
+    image: 'assets/users/carmen.png',
+    text: "Desde que comecei com a suplementação e uma alimentação balanceada, percebo uma grande melhora nas articulações e na minha disposição. Sinto meu corpo mais forte e tenho mais ânimo para fazer coisas que antes evitava. Realmente, fez toda a diferença!",
+    nome: "Carmen Lúcia"
+  },
+  {
+    image: 'assets/users/lucia.png',
+    text: "Com a nova alimentação e suplementação, consegui controlar melhor meu diabetes e reduzir o colesterol. Hoje, me sinto mais leve, com mais energia e menos preocupada com a saúde, o que me permite aproveitar mais os momentos com a família.",
+    nome: "Lucia Helena"
+  },
+  {
+    image: 'assets/users/lucas.png',
+    text: "A mudança para uma rotina de alimentação saudável e suplementação me trouxe mais foco e disposição, tanto no trabalho quanto na vida pessoal. Estou com muito mais energia e consigo lidar com o dia a dia de forma leve. Me sinto muito mais disposto!",
+    nome: "Lucas D'Aloia"
+  }];
 
 // Utilitários
 const $ = selector => document.querySelector(selector);
@@ -415,7 +429,7 @@ function setupMobileMenu() {
   });
 
   mobileMenu.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', closeMenu, {passive: true});
+    link.addEventListener('click', closeMenu, { passive: true });
   });
 
   document.addEventListener('click', (e) => {
@@ -432,7 +446,7 @@ function setupSmoothScroll() {
       e.preventDefault();
       const target = $(anchor.getAttribute('href'));
       target?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }, {passive: true});
+    }, { passive: true });
   });
 }
 
@@ -492,9 +506,9 @@ function setupModalListeners() {
   if (!modal) return;
 
   modal.addEventListener('click', (e) => {
-      if (e.target === modal) {
-          closeModal();
-      }
+    if (e.target === modal) {
+      closeModal();
+    }
   });
 }
 // Inicialização
@@ -513,32 +527,32 @@ function init() {
   displayTestimonials();
   setupVideoModal();
   setupSmoothScroll();
-  
+
 }
 
 // Event Listeners
-document.addEventListener('DOMContentLoaded', init, {passive: true});
+document.addEventListener('DOMContentLoaded', init, { passive: true });
 
 let darkModeIcons = document.querySelectorAll("#dark-mode-icon");
 
 darkModeIcons.forEach(icon => {
-    icon.addEventListener("click", function() {
-        document.body.classList.toggle("dark-theme");
-        
-        darkModeIcons.forEach(icon => {
-            if (document.body.classList.contains("dark-theme")) {
-                icon.src = "assets/icons/sun.png";
-            } else {
-                icon.src = "assets/icons/moon.png";
-            }
-        });
+  icon.addEventListener("click", function () {
+    document.body.classList.toggle("dark-theme");
+
+    darkModeIcons.forEach(icon => {
+      if (document.body.classList.contains("dark-theme")) {
+        icon.src = "assets/icons/sun.png";
+      } else {
+        icon.src = "assets/icons/moon.png";
+      }
     });
+  });
 });
 
 
-document.addEventListener('DOMContentLoaded', function() {
-    // Modal de Política de Privacidade
-    const privacyModalHTML = `
+document.addEventListener('DOMContentLoaded', function () {
+  // Modal de Política de Privacidade
+  const privacyModalHTML = `
         <div id="privacy-modal" class="modal-overlay">
             <div class="modal-content">
                 <span class="close-button" onclick="closePrivacyModal()">&times;</span>
@@ -569,8 +583,8 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
     `;
 
-    // Modal de Termos e Condições
-    const termsModalHTML = `
+  // Modal de Termos e Condições
+  const termsModalHTML = `
         <div id="terms-modal" class="modal-overlay">
             <div class="modal-content">
                 <span class="close-button" onclick="closeTermsModal()">&times;</span>
@@ -597,12 +611,12 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
     `;
 
-    // Adicionar os modais ao body
-    document.body.insertAdjacentHTML('beforeend', privacyModalHTML);
-    document.body.insertAdjacentHTML('beforeend', termsModalHTML);
+  // Adicionar os modais ao body
+  document.body.insertAdjacentHTML('beforeend', privacyModalHTML);
+  document.body.insertAdjacentHTML('beforeend', termsModalHTML);
 
-    // Adicionar estilos
-    const styles = `
+  // Adicionar estilos
+  const styles = `
         <style>
             .modal-overlay {
                 display: none;
@@ -694,52 +708,52 @@ document.addEventListener('DOMContentLoaded', function() {
         </style>
     `;
 
-    // Adicionar estilos ao head
-    document.head.insertAdjacentHTML('beforeend', styles);
+  // Adicionar estilos ao head
+  document.head.insertAdjacentHTML('beforeend', styles);
 });
 
 // Funções para controlar os modais
 function openPrivacyModal() {
-    const modal = document.getElementById('privacy-modal');
-    if (modal) {
-        modal.style.display = 'block';
-        document.body.style.overflow = 'hidden';
-    }
+  const modal = document.getElementById('privacy-modal');
+  if (modal) {
+    modal.style.display = 'block';
+    document.body.style.overflow = 'hidden';
+  }
 }
 
 function closePrivacyModal() {
-    const modal = document.getElementById('privacy-modal');
-    if (modal) {
-        modal.style.display = 'none';
-        document.body.style.overflow = '';
-    }
+  const modal = document.getElementById('privacy-modal');
+  if (modal) {
+    modal.style.display = 'none';
+    document.body.style.overflow = '';
+  }
 }
 
 function openTermsModal() {
-    const modal = document.getElementById('terms-modal');
-    if (modal) {
-        modal.style.display = 'block';
-        document.body.style.overflow = 'hidden';
-    }
+  const modal = document.getElementById('terms-modal');
+  if (modal) {
+    modal.style.display = 'block';
+    document.body.style.overflow = 'hidden';
+  }
 }
 
 function closeTermsModal() {
-    const modal = document.getElementById('terms-modal');
-    if (modal) {
-        modal.style.display = 'none';
-        document.body.style.overflow = '';
-    }
+  const modal = document.getElementById('terms-modal');
+  if (modal) {
+    modal.style.display = 'none';
+    document.body.style.overflow = '';
+  }
 }
 
 // Adicionar eventos para fechar os modais quando clicar fora
-document.addEventListener('click', function(event) {
-    const privacyModal = document.getElementById('privacy-modal');
-    const termsModal = document.getElementById('terms-modal');
-    
-    if (event.target === privacyModal) {
-        closePrivacyModal();
-    }
-    if (event.target === termsModal) {
-        closeTermsModal();
-    }
+document.addEventListener('click', function (event) {
+  const privacyModal = document.getElementById('privacy-modal');
+  const termsModal = document.getElementById('terms-modal');
+
+  if (event.target === privacyModal) {
+    closePrivacyModal();
+  }
+  if (event.target === termsModal) {
+    closeTermsModal();
+  }
 });
