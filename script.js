@@ -258,8 +258,8 @@ const products = [{
     "Formação de Glóbulos Vermelhos",
     "Melhora da Memória e Concentração"
   ],
-  amazonLink: "",
-  amazonLinkEU: ""
+  amazonLink: "https://amzn.to/3Vj9jh4",
+  amazonLinkEU: "https://amzn.to/49nHSsk"
 }
 ];
 /*
