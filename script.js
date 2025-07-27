@@ -11,7 +11,7 @@ const products = [{
     "Rico em compostos bioativos",
     "Auxilia na proteção das vias respiratórias"
   ],
-  amazonLink: "https://amzn.to/4em4PwZ",
+  amazonLink: "https://amzn.to/3IHh8tn",
   amazonLinkEU: "https://amzn.to/4fO5h8b"
 },
 {
@@ -90,7 +90,7 @@ const products = [{
     "Promove maior volume muscular"
   ],
   amazonLink: "https://amzn.to/4e0FgRT",
-  amazonLinkEU: "https://amzn.to/4gaKQmf"
+  amazonLinkEU: "https://amzn.to/414xP8l"
 },
 {
   image: 'assets/products/whey.png',
@@ -103,7 +103,7 @@ const products = [{
     "Contém Arginina"
   ],
   amazonLink: "https://amzn.to/4fnAUFn",
-  amazonLinkEU: "https://amzn.to/48WCs7t"
+  amazonLinkEU: "https://amzn.to/4lEBJ0c"
 },
 {
   image: 'assets/products/zinco.png',
@@ -117,7 +117,7 @@ const products = [{
     "Auxilio no equilíbrio hormonal"
   ],
   amazonLink: "https://amzn.to/40r2woP",
-  amazonLinkEU: "https://amzn.to/3CuYbHt"
+  amazonLinkEU: "https://amzn.to/3UwmoCN"
 },
 {
   image: 'assets/products/glutamina.png',
@@ -180,7 +180,7 @@ const products = [{
     "Ajuda no controle da tireoide e no equilíbrio do metabolismo",
     "É antioxidante e previne o envelhecimento"
   ],
-  amazonLink: "https://amzn.to/4flJqF0",
+  amazonLink: "https://amzn.to/46ZlYfB",
   amazonLinkEU: "https://amzn.to/40Ob61f"
 },
 {
@@ -206,8 +206,8 @@ const products = [{
     "Suporte à saúde muscular e nervosa",
     "Estimula a energia e a função cognitiva"
   ],
-  amazonLink: "https://amzn.to/40sRNdL",
-  amazonLinkEU: "https://amzn.to/3CK2hLC"
+  amazonLink: "https://amzn.to/3J6rXFq",
+  amazonLinkEU: "https://amzn.to/45lTv2i"
 },
 {
   image: 'assets/products/pycnogenol.png',
@@ -220,7 +220,7 @@ const products = [{
     "Redução de inflamações"
   ],
   amazonLink: "https://amzn.to/3Yskpkq",
-  amazonLinkEU: "https://amzn.to/3BWma1J"
+  amazonLinkEU: "https://amzn.to/4lDjk3H"
 },
 {
   image: "assets/products/creatina-mono.jpg",
